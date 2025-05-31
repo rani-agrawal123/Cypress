@@ -22,4 +22,15 @@ it('iframe test',()=>{
     //  eq- will access the element with the given index
     //  find -- text or the selector
 })
-})
+
+
+
+
+
+    // iframe commands
+    it.only('',()=>{
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.login();
+        cy.logout();
+    })
+}) 

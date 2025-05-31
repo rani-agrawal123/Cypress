@@ -28,10 +28,16 @@ import 'cypress-real-events/support';
 import "cypress-iframe";
 
 
-// Cypress.Commands.add('login', (username, password) => {
-//     cy.get('#username').type(username);
-//     cy.get('#password').type(password);
-//     cy.get('.radius').click();
-// });
+Cypress.Commands.add('login',(name,password)=>{
+    cy.get("[name = 'username']").type("Admin");
+    cy.get("[name = 'password']").type("admin123");
+    cy.get("[type = 'submit']").click();
+    cy.wait(3000);
+})
 
 
+Cypress.Commands.add('logout',()=>{
+    cy.get('.oxd-userdropdown-tab > .oxd-icon').click()
+    cy.get(':nth-child(4) > .oxd-userdropdown-link').click();
+    cy.wait(3000)
+})
