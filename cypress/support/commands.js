@@ -37,7 +37,7 @@ Cypress.Commands.add('login',(user)=>{
 
 
 Cypress.Commands.add('logout',()=>{
-    cy.get('.bi-caret-down-fill').click()
+    cy.get('.oxd-userdropdown-tab > .oxd-icon').click()
     cy.get(':nth-child(4) > .oxd-userdropdown-link').click();
     cy.wait(3000)
 })
