@@ -14,6 +14,7 @@ describe('',()=>{
 
 it('testing',()=>{
     product.addToCart();
+    product.goToCart()
     
 })
 

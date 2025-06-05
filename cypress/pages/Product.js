@@ -7,7 +7,12 @@ class Product{
     }
     logout(){
         cy.get('#react-burger-menu-btn').click();
-        cy.contains('Logout').click()
+        cy.contains('Logout').click();
+        
+    }
+
+    goToCart(){
+        cy.get('.shopping_cart_link').click()
     }
 }
 export default Product
